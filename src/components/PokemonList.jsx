@@ -32,7 +32,7 @@ export const PokemonList = () => {
       <>
         <br />
 
-        <h1 className="center">Pokemons list</h1>
+        <h1 className="center letra-title">Pokemons list</h1>
         <hr />
 
         <div className="center">

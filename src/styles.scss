@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
 body {
     background-image: url("../assets/img/fondo.jpg");
     background-repeat: no-repeat;
@@ -149,4 +150,9 @@ nav ul {
 
 .principal{
     padding: 10px;
+}
+
+.letra-title {
+    font-family: 'Silkscreen' ;
+    font-size: 80px;
 }
