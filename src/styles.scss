@@ -7,9 +7,8 @@ body {
 
 
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  
+    border-radius: 300px;
 }
 
 .botones {
@@ -146,4 +145,8 @@ nav ul {
 
 .link a:hover {
     background: #0b76a6;
+}
+
+.principal{
+    padding: 10px;
 }

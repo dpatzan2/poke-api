@@ -11,10 +11,9 @@ export const Navbar = () => {
 
         <nav>
           <ul>
-            <Link className="link" to="/">
-              <a href="#">Inicio</a>
+            <Link className="link"  to="/">
+              <a className="a">Inicio</a>
             </Link>
-            
           </ul>
         </nav>
       </header>

@@ -33,7 +33,7 @@ export const PokemonById = () => {
     }else{
         return (
           <>
-            <div className="row mt-5 animate__animated animate__fadeInLeft">
+            <div className="row mt-5 animate__animated animate__fadeInLeft ">
               <div className="col-4">
                 <Carousel>
                   <Carousel.Item interval={1000}>
@@ -66,7 +66,7 @@ export const PokemonById = () => {
                   </Carousel.Item>
                 </Carousel>
               </div>
-              <div className="col-8">
+              <div className="col-8 ">
                 <h3 className="center tamaño">{poke.name}</h3>
                 <ul className="list-group list-group-flush">
                   <li className="list-group-item">
