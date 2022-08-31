@@ -5,7 +5,7 @@ import { PokemonCard } from './PokemonCard';
 
 export const PokemonList = () => {
 
-    const [url, setURL] = useState(`https://pokeapi.co/api/v2/pokemon?limit=20offset=0`);
+    const [url, setURL] = useState(`https://pokeapi.co/api/v2/pokemon?limit=30offset=0`);
     const [pokemons2, setpokemons2] = useState([])
 
     
@@ -29,45 +29,56 @@ export const PokemonList = () => {
 
 
     return (
-        <>
-        
+      <>
+        <br />
+
+        <h1 className="center">Pokemons list</h1>
+        <hr />
+
         <div className="center">
-            {
-            data.previous
-            ?<button onClick={() => previousPage(data.previous)}>previous page</button>
-            : ''
-        }
-        {
-            data.next
-            ? <button onClick={() => nextPage(data.next)}>Next page</button>
-            : ''
-        }
+          {data.previous ? (
+            <button
+              className="botones"
+              onClick={() => previousPage(data.previous)}
+            >
+              previous page
+            </button>
+          ) : (
+            ""
+          )}
+          {data.next ? (
+            <button className="botones" onClick={() => nextPage(data.next)}>
+              Next page
+            </button>
+          ) : (
+            ""
+          )}
         </div>
-        
 
         <hr />
 
-        {
-            isLoading
-            ? <LoadingPokemon />
-            : <PokemonCard pokemons={pokemons}/>
-        }
+        {isLoading ? <LoadingPokemon /> : <PokemonCard pokemons={pokemons} />}
         <hr />
-        
-        <div className="center">
-            {
-            data.previous
-            ?<button onClick={() => previousPage(data.previous)}>previous page</button>
-            : ''
-        }
-        {
-            data.next
-            ? <button onClick={() => nextPage(data.next)}>Next page</button>
-            : ''
-        }
-        </div>
 
-        
-        </>
-    )
+        <div className="center">
+          {data.previous ? (
+            <button
+              className="botones"
+              onClick={() => previousPage(data.previous)}
+            >
+              previous page
+            </button>
+          ) : (
+            ""
+          )}
+          {data.next ? (
+            <button className="botones" onClick={() => nextPage(data.next)}>
+              Next page
+            </button>
+          ) : (
+            ""
+          )}
+        </div>
+      </>
+    );
 }

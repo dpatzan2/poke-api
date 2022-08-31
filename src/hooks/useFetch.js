@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { GetPokemons } from "../helpers/GetPokemons";
+import { getPokemonBydId, GetPokemons } from "../helpers/GetPokemons";
 
 export const useFetch = ({url = 'https://pokeapi.co/api/v2/pokemon?limit=20&offset=0'}) => {
 
@@ -8,7 +8,8 @@ export const useFetch = ({url = 'https://pokeapi.co/api/v2/pokemon?limit=20&offs
     const [pokemons, setPokemons] = useState([]);
     const [data, setData] = useState([])
     const [isLoading, setIsLoading] = useState(true);
-    const [pokemonURL, setPokemonURL] = useState([])
+    const [pokemonURL, setPokemonURL] = useState([]);
+    const [poke, setPoke] = useState([]);
 
     const getPokemons = async () => {
       const {pokemon, data} = await GetPokemons(url);
@@ -16,6 +17,11 @@ export const useFetch = ({url = 'https://pokeapi.co/api/v2/pokemon?limit=20&offs
       setData(data);
       setIsLoading(false);
     };
+
+    const getPokemonsById = async (id) => {
+      const pokemon = await getPokemonBydId(id);
+      setPoke(pokemon);
+    }
 
     useEffect(() => {
       setIsLoading(true);
@@ -26,5 +32,6 @@ export const useFetch = ({url = 'https://pokeapi.co/api/v2/pokemon?limit=20&offs
         pokemons,
         data,
         isLoading,
+        poke
     }
 }

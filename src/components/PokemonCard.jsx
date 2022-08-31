@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 
 export const PokemonCard = ({pokemons}) => {
     return (
@@ -27,9 +28,9 @@ export const PokemonCard = ({pokemons}) => {
                                 
                                 
 
-                                {/* <Link to={`/hero/${id}`}>
-                                    More
-                                </Link> */}
+                                <Link to={`/about/${poke.id}`}>
+                                    Read more
+                                </Link> 
                             </div>
                         </div>
                     </div>
