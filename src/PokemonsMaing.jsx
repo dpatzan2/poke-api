@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { PokemonList } from './components/PokemonList'
 import { Routes, Route, Link } from "react-router-dom";
-import { useFetch } from './hooks/useFetch'
 import { PokemonById } from './components/PokemonById';
 import { Navbar } from './components/Navbar';
 

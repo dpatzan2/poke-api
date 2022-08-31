@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, {  useState } from 'react'
 import { useFetch } from '../hooks/useFetch';
 import LoadingPokemon from './LoadingPokemon';
 import { PokemonCard } from './PokemonCard';
@@ -6,12 +6,9 @@ import { PokemonCard } from './PokemonCard';
 export const PokemonList = () => {
 
     const [url, setURL] = useState(`https://pokeapi.co/api/v2/pokemon?limit=30offset=0`);
-    const [pokemons2, setpokemons2] = useState([])
-
     
     const { pokemons, data, isLoading } = useFetch({ url });
 
-    console.log(data)
 
     //console.log(pokemons)
 

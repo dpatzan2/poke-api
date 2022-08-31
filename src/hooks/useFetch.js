@@ -3,8 +3,6 @@ import { getPokemonBydId, GetPokemons } from "../helpers/GetPokemons";
 
 export const useFetch = ({url = 'https://pokeapi.co/api/v2/pokemon?limit=20&offset=0'}) => {
 
-  console.log( 'usefETCH' , url)
-
     const [pokemons, setPokemons] = useState([]);
     const [data, setData] = useState([])
     const [isLoading, setIsLoading] = useState(true);
