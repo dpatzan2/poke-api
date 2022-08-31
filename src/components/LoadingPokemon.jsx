@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function LoadingPokemon() {
     return (
-        <div className="container">
+        <div className="loading">
           <div className="hijo">
             <img
               className="pokeball"

@@ -6,7 +6,6 @@ export const useFetch = ({url = 'https://pokeapi.co/api/v2/pokemon?limit=20&offs
     const [pokemons, setPokemons] = useState([]);
     const [data, setData] = useState([])
     const [isLoading, setIsLoading] = useState(true);
-    const [pokemonURL, setPokemonURL] = useState([]);
     const [poke, setPoke] = useState([]);
 
     const getPokemons = async () => {

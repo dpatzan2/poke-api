@@ -11,8 +11,11 @@ export const Navbar = () => {
 
         <nav>
           <ul>
-            <Link className="link"  to="/">
+            <Link className="link" to="/">
               <a className="a">Inicio</a>
+            </Link>
+            <Link className="link" to="/search">
+              <a className="a">Buscar</a>
             </Link>
           </ul>
         </nav>

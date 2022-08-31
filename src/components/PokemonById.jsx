@@ -22,9 +22,6 @@ export const PokemonById = () => {
     }, [])
     
     
-
-    console.log(poke, isLoading)
-
     const onReturn = () => {
         navigate(-1)
     }

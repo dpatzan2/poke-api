@@ -1,3 +1,4 @@
+import axios from "axios";
 
 export const GetPokemons = async (url) => {
    let pokemon= [];
@@ -6,10 +7,7 @@ export const GetPokemons = async (url) => {
   for (let i = 0; i < data.results.length; i++) {
     const dataPokemon= await fetch(data.results[i].url);
     const pokemonURL = await dataPokemon.json();
-    //console.log('POKEMONURL', pokemonURL)
-    //pokemon.shift()
     pokemon.push(pokemonURL);
-    //console.log(data)
   } 
 
   return {
@@ -24,4 +22,10 @@ export const getPokemonBydId = async (id) => {
   const data = await response.json();
 
   return data;
+}
+
+export const getPokemonByName = async (name) => {
+  const url = `https://pokeapi.co/api/v2/pokemon/${name.toLowerCase()}`;
+
+  return axios.get(url)
 }

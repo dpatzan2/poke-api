@@ -8,8 +8,13 @@ body {
 
 
 .container {
-  
     border-radius: 300px;
+}
+
+.loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .botones {
@@ -89,6 +94,7 @@ body {
 }
 
 .tamaño{
+    font-family: 'Silkscreen';
     font-size: 100px;
 }
 
