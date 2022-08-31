@@ -8,7 +8,7 @@ export const PokemonsMaing = () => {
 
     return (
         <>
-            <h1>Pokemons</h1>
+            <h1 className="center">Pokemons list</h1>
             <hr />
             <PokemonList />
         </>
