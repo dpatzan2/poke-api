@@ -20,8 +20,8 @@
 ## Dependencias utilizadas
 
 
-| Dependencia | VESRSIÓN|LINK |
-| ------ | ------ |
+| Dependencia | VESRSIÓN |LINK |
+| ------ | ------ | ------ |
 | axios |0.27.2 | https://www.npmjs.com/package/axios |
 | bootstrap | 5.2.0 | https://www.npmjs.com/package/bootstrap |
 | query-string | 7.1.1 | https://www.npmjs.com/package/query-string |
