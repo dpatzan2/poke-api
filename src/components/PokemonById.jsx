@@ -31,7 +31,7 @@ export const PokemonById = () => {
         return (
           <>
             <div className="row mt-5 animate__animated animate__fadeInLeft ">
-              <div className="col-4">
+              <div className="col-md-4 col-12 responsive">
                 <Carousel>
                   <Carousel.Item interval={1000}>
                     <img
@@ -63,7 +63,7 @@ export const PokemonById = () => {
                   </Carousel.Item>
                 </Carousel>
               </div>
-              <div className="col-8 ">
+              <div className="col-md-8 col 12 responsive">
                 <h3 className="center tamaño">{poke.name}</h3>
                 <ul className="list-group list-group-flush">
                   <li className="list-group-item">
@@ -87,7 +87,7 @@ export const PokemonById = () => {
 
                 <br />
 
-                <button className="botones" onClick={onReturn}>
+                <button className="botones back" onClick={onReturn}>
                   Back
                 </button>
               </div>

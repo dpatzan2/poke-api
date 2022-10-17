@@ -5,23 +5,23 @@ import { PokemonCard } from './PokemonCard';
 
 export const PokemonList = () => {
 
-    const [url, setURL] = useState(`https://pokeapi.co/api/v2/pokemon?limit=30offset=0`);
     
-    const { pokemons, data, isLoading } = useFetch({ url });
+    
+    const { pokemons, data, isLoading, setPage} = useFetch();
 
 
     //console.log(pokemons)
 
-   
+
 
     // console.log(pokemons.data?.next)
 
     const nextPage = (urlNext) => {
-        setURL(urlNext);
+      setPage(urlNext)
     }
 
     const previousPage = (urlPrevious) => {
-        setURL(urlPrevious);
+      setPage(urlPrevious);
     }
 
 

@@ -162,3 +162,29 @@ nav ul {
     font-family: 'Silkscreen' ;
     font-size: 80px;
 }
+
+@media (max-width: 800px){
+    .letra-title{
+        font-size: 150%;
+    }
+
+    .car-body{
+        text-align: center;
+        padding-top: -20%;
+    }
+
+    .container{
+        height: 35em;
+    }
+    .tamaño{
+        font-size: 2.5em;
+    }
+
+    .back{
+        margin-left: 4em;
+        margin-bottom: 2em;
+    }
+    .responsive{
+        padding-right: 0;
+    }
+}

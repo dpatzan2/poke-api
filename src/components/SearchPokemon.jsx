@@ -47,7 +47,7 @@ export const SearchPokemon = () => {
             <h1 className="center letra-title">Search a pokemon</h1>
             <hr />
             <div className="row">
-                <div className="col-5">
+                <div className="col-md-5 col-12">
                 <h4>Searching</h4>
                 <hr />
                 <form action="" onSubmit={onSearchSubmit}>
@@ -56,7 +56,7 @@ export const SearchPokemon = () => {
                 </form>
             </div>
 
-            <div className="col-7">
+            <div className="col-md-7 col-12">
                 <h4>Results</h4>
                 <hr />
                 {/* {

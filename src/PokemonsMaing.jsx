@@ -13,8 +13,8 @@ export const PokemonsMaing = () => {
       <>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Navigate to="/poke-api" />} />
-          <Route path="/poke-api" element={<PokemonList />} />
+          <Route path="/" element={<Navigate to="/inicio" />} />
+          <Route path="inicio" element={<PokemonList />} />
           <Route path="about/:id" element={<PokemonById />} />
           <Route path="search" element={<SearchPokemon />} />
         </Routes>
