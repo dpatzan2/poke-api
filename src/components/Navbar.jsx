@@ -2,6 +2,11 @@ import React from 'react';
 import { Link} from "react-router-dom";
 
 export const Navbar = () => {
+
+  const deleteStorage = () => {
+    console.log('dasdas')
+    localStorage.clear();
+  }
     return (
       <header id="Datos">
         <a id="Datos-personal">
@@ -11,7 +16,7 @@ export const Navbar = () => {
 
         <nav>
           <ul>
-            <Link className="link" to="/">
+            <Link className="link" to="/" onClick={() => deleteStorage()}>
               <a className="a">Inicio</a>
             </Link>
             <Link className="link" to="/search">

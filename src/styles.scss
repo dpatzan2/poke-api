@@ -19,7 +19,8 @@ body {
 
 .botones {
     margin: auto;
-    padding: 1rem;
+    padding-left: 2em;
+    padding-right: 2em;
     text-transform: uppercase;
     color: #fafafa;
     background-color: green;
@@ -32,7 +33,7 @@ body {
     position: relative;
     top: 0;
     right: 0;
-    padding-left: 2.5rem;
+    font-size: 2em;
 
     &:after,
     &:before {
@@ -44,44 +45,22 @@ body {
         transition: .3s all ease;
     }
 
-    &:before {
-        content: '_';
-        position: absolute;
-        left: 1.4rem;
-        top: .9rem;
-    }
-
-    &:after {
-        content: '>';
-        position: absolute;
-        left: .8rem;
-        top: 1rem;
-    }
-
     &:hover {
         box-shadow: 1px 1px 20px rgba(150, 150, 150, .2);
         top: -.1rem;
         right: -.1rem;
         cursor: pointer;
-
-
-        &:before {
-            content: '_';
-            position: absolute;
-            left: .8rem;
-            top: .7rem;
-            transform: translateY(-1px);
-        }
-
-        &:after {
-            content: '>';
-            position: absolute;
-            left: 1.1rem;
-            top: 1rem;
-        }
     }
 }
 
+.car-body{
+    padding-top: 2em;
+}
+
+.card-title{
+    font-family: 'Silkscreen';
+    font-size: 2em;
+}
 .center {
     display: flex;
     align-items: center;
@@ -163,6 +142,10 @@ nav ul {
     font-size: 80px;
 }
 
+.back{
+    padding-bottom: 0.2em;
+}
+
 @media (max-width: 800px){
 
     .container {
@@ -170,6 +153,7 @@ nav ul {
     }
 
     .car-body{
+        padding-top: 0;
         text-align: center;
     }
 
@@ -262,6 +246,7 @@ button {
     border-right: 0.125rem solid #fff;
     transform: rotate(45deg);
    }
+   
    
    button.learn-more .texto_button {
     transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);

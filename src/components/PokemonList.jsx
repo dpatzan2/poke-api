@@ -30,7 +30,6 @@ export const PokemonList = () => {
         <br />
 
         <h1 className="center letra-title">Pokemons list</h1>
-        <hr />
 
         <div className="center">
           {data.previous ? (
@@ -38,24 +37,24 @@ export const PokemonList = () => {
               className="botones"
               onClick={() => previousPage(data.previous)}
             >
-              previous page
+              &#8249;
             </button>
           ) : (
             ""
           )}
           {data.next ? (
             <button className="botones" onClick={() => nextPage(data.next)}>
-              Next page
+              &#8250;
             </button>
           ) : (
             ""
           )}
         </div>
 
-        <hr />
+   
 
         {isLoading ? <LoadingPokemon /> : <PokemonCard pokemons={pokemons} />}
-        <hr />
+  
 
         <div className="center">
           {data.previous ? (
@@ -63,14 +62,14 @@ export const PokemonList = () => {
               className="botones"
               onClick={() => previousPage(data.previous)}
             >
-              previous page
+              &#8249;
             </button>
           ) : (
             ""
           )}
           {data.next ? (
             <button className="botones" onClick={() => nextPage(data.next)}>
-              Next page
+              &#8250;
             </button>
           ) : (
             ""
