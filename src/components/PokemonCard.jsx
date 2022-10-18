@@ -38,11 +38,14 @@ export const PokemonCard = ({ pokemons }) => {
                           </p>
                           {poke.abilities?.map((abilities, index2) => (
                             <>
-                              <ul>
+                            <div className="centrar-listas">
+                            <ul>
                                 <li className="card-text" key={index2}>
                                   {abilities.ability.name}
                                 </li>
                               </ul>
+                            </div>
+                              
                             </>
                           ))}
                           <button  class="learn-more">
