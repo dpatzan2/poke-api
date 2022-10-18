@@ -8,10 +8,15 @@ export const useFetch = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [poke, setPoke] = useState([]);
 
-    const [url, setURL] = useState(`https://pokeapi.co/api/v2/pokemon?limit=30offset=0`);
 
-    const getPokemons = async () => {
-      const {pokemon, data} = await GetPokemons(url);
+    if(!localStorage.getItem('url')){
+      localStorage.setItem('url', `https://pokeapi.co/api/v2/pokemon?limit=30offset=0`);
+    }
+
+    const [url, setURL] = useState(localStorage.getItem('url'));
+
+    const getPokemons = async (urlPage) => {
+      const {pokemon, data} = await GetPokemons(urlPage);
       setPokemons(pokemon);
       setData(data);
       setIsLoading(false);
@@ -23,12 +28,15 @@ export const useFetch = () => {
     }
 
     const setPage = async (url) => {
-      await setURL(url);
+      console.log('asd')
+       localStorage.setItem('url', url);
+      setIsLoading(true);
+      getPokemons(url);
     }
 
     useEffect(() => {
       setIsLoading(true);
-      getPokemons();
+      getPokemons(url);
     }, [url]);
 
     return {

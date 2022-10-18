@@ -7,7 +7,10 @@ import { SearchPokemon } from './components/SearchPokemon';
 
 export const PokemonsMaing = () => {
 
-    
+  window.addEventListener('beforeunload', function (e) {
+    e.preventDefault();
+    this.localStorage.clear();
+});
 
     return (
       <>
