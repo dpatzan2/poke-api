@@ -148,6 +148,16 @@ nav ul {
 
 @media (max-width: 800px){
 
+    .container__principal__search{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .row{
+        margin: 0 !important;
+    }
+
     .container {
         border-radius: 150px;
     }
@@ -186,7 +196,6 @@ nav ul {
     }
 }
 
-/* From uiverse.io */
 button {
     position: relative;
     display: inline-block;

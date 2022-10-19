@@ -46,8 +46,9 @@ export const SearchPokemon = () => {
         <>
             <h1 className="center letra-title">Search a pokemon</h1>
             <hr />
+            <div className="container__principal__search">
             <div className="row">
-                <div className="col-md-5 col-12">
+                <div className="col-md-5 col-11">
                 <h4>Searching</h4>
                 <hr />
                 <form action="" onSubmit={onSearchSubmit}>
@@ -74,6 +75,7 @@ export const SearchPokemon = () => {
                 ? <PokemonCardSearch poke={pokemon} />
                 : ''
                 }
+            </div>
             </div>
             </div>
         </>
